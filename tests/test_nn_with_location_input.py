@@ -4,7 +4,7 @@ from machine_learning.mpl import MPL
 import machine_learning.enumeration_classes as class_enums
 
 import pytest
-from tests.utils import TestUtils
+from utils import TestUtils
 import pickle
 import matplotlib.pyplot as plt
 from pathlib import Path
