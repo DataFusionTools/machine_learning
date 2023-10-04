@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Union
 import numpy as np
@@ -17,8 +17,8 @@ class RandomForest(BaseClassMachineLearning):
     accuracy: Union[List, None, np.ndarray] = None
     encoder: Union[List, None, np.ndarray] = None
     model: Union[List, None, np.ndarray] = None
-    n_estimator: np.ndarray = np.linspace(1, 30, 30)
-    max_depth: np.ndarray = np.linspace(1, 20, 20)
+    n_estimator: np.ndarray = field(default_factory=lambda: np.linspace(1, 30, 30))
+    max_depth: np.ndarray = field(default_factory=lambda: np.linspace(1, 20, 20))
     feature_names: Union[List, None] = None
 
     def __run_random_forest(self, estimator):
