@@ -8,7 +8,7 @@ from core.utils import CreateInputsML, AggregateMethod
 import machine_learning.enumeration_classes as class_enums
 from machine_learning.bayesian_neural_network import BayesianNeuralNetwork
 
-from tests.utils import TestUtils
+from utils import TestUtils
 
 
 def get_input_data():

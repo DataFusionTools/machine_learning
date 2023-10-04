@@ -1,10 +1,8 @@
-from pathlib import Path
 from machine_learning.support_vector_machine import SVM
-import machine_learning.enumeration_classes as enum_classes
 import pytest
 import numpy as np
 from sklearn import preprocessing
-from tests.utils import TestUtils
+from utils import TestUtils
 
 np.random.seed(1)
 

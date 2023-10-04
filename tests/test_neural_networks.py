@@ -3,7 +3,7 @@ from machine_learning.mpl import MPL
 import machine_learning.enumeration_classes as enum_classes
 import pytest
 import numpy as np
-from tests.utils import TestUtils
+from utils import TestUtils
 
 np.random.seed(1)
 

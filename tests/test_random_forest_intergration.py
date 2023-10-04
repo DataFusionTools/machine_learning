@@ -1,13 +1,10 @@
 from core.data_input import Data, Variable, Geometry
 from core.utils import CreateInputsML, AggregateMethod
 from machine_learning.random_forest import RandomForest
-import machine_learning.enumeration_classes as class_enums
-
-import tensorflow
 
 import pytest
 import numpy as np
-from tests.utils import TestUtils
+from utils import TestUtils
 import pickle
 import matplotlib.pyplot as plt
 from pathlib import Path

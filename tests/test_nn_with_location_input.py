@@ -4,14 +4,10 @@ from machine_learning.mpl import MPL
 import machine_learning.enumeration_classes as class_enums
 
 import pytest
-import numpy as np
 from tests.utils import TestUtils
 import pickle
-from shapely import geometry
 import matplotlib.pyplot as plt
-import copy
 from pathlib import Path
-import random
 
 
 class TestTutorial:

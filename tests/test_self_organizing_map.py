@@ -1,7 +1,7 @@
 from machine_learning.self_organizing_map import SOM
 import pytest
 import numpy as np
-from tests.utils import TestUtils
+from utils import TestUtils
 import pandas as pd
 
 
