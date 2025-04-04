@@ -36,7 +36,7 @@ class MPL(NeuralNetwork):
         :param target: Target data of the model
         :param output_activation_function: Activation function of the output layer of the NN
         """
-        inputs = keras.Input(shape=self.training_data.shape[1])
+        inputs = keras.Input(shape=(self.training_data.shape[1],))
         x = scaled_training_data(inputs)
         # hidden layers
         for i in range(self.nb_hidden_layers):
