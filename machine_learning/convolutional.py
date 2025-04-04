@@ -48,7 +48,7 @@ class Convolutional(NeuralNetwork):
         inputs = keras.Input(
             shape=self.training_data.reshape(
                 self.training_data.shape[0], self.training_data.shape[1], self.n_dim
-            ).shape[1:]
+            ,).shape[1:]
         )
         x = scaled_training_data(inputs)
         # hidden layers
