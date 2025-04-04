@@ -125,11 +125,3 @@ class TestTutorial:
         nn.plot_cost_function(output_folder=Path("./tests/test_output"))
         nn.predict(validation_training)
         nn.plot_fitted_line(validation_target, Path("./tests/test_output"))
-
-        plt.clf()
-        plt.plot(nn.prediction[:50], validation_training.T[1][:50], "ro")
-        plt.plot(validation_target[:50], validation_training.T[1][:50], "bo")
-        # plot 1/1 line
-        plt.xlabel("IC")
-        plt.ylabel("depth")
-        plt.savefig("./tests/test_output/comparison_depth.png")
