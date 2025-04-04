@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import List, Union
 from tensorflow.keras.losses import KLDivergence
 from tensorflow.keras import layers
+from tensorflow.keras.layers import Rescaling
 import matplotlib.pylab as plt
 import numpy as np
 from pathlib import Path
@@ -120,7 +121,7 @@ class NeuralNetwork(BaseClassMachineLearning):
         """
         Rescaling process of training data
         """
-        return layers.experimental.preprocessing.Rescaling(
+        return Rescaling(
             1 / np.max(self.training_data, axis=0)
         )
 
