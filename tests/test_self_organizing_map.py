@@ -1,4 +1,3 @@
-from machine_learning.self_organizing_map import SOM
 import pytest
 import numpy as np
 from utils import TestUtils
@@ -9,6 +8,7 @@ class TestSOM:
     @pytest.mark.skip(reason="Skipping due to sompy issue")
     @pytest.mark.intergrationtest
     def test_SOM_training(self):
+        from machine_learning.self_organizing_map import SOM
         # read data from file
         input_files = str(
             TestUtils.get_test_files_from_local_test_dir("", "NN_data.csv")[0]
