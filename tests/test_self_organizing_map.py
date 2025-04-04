@@ -6,6 +6,7 @@ import pandas as pd
 
 
 class TestSOM:
+    @pytest.mark.skip(reason="Skipping due to sompy issue")
     @pytest.mark.intergrationtest
     def test_SOM_training(self):
         # read data from file
