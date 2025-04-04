@@ -73,7 +73,7 @@ class BayesianNeuralNetwork(NeuralNetwork):
 
         """
         self.probabilistic = True
-        inputs = keras.Input(shape=self.training_data.shape[1])
+        inputs = keras.Input(shape=(self.training_data.shape[1],))
         features = layers.BatchNormalization()(inputs)
         # hidden layers
         for i in range(self.nb_hidden_layers):
