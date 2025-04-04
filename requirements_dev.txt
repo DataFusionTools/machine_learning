@@ -7,7 +7,7 @@ tensorflow==2.14.0
 shap==0.42.1
 scikit-image==0.22.0
 altair==5.1.2
-tensorflow-probability==0.22.0
+tensorflow-probability[tf]
 git+https://github.com/sevamoo/SOMPY
 git+https://github.com/DataFusionTools/core
 git+https://github.com/DataFusionTools/spatial_utils
