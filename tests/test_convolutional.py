@@ -30,11 +30,12 @@ class TestConvolutional:
         idx_val = list(set(range(len(data))) - set(idx_tra))
 
         # Training and validation data
-        training_data = features[idx_tra]
+        training_data = features[idx_tra].reshape(-1, features.shape[1], 1)  # Add channel dimension
         target_data = target[idx_tra]
 
-        validation_training = features[idx_val]
+        validation_training = features[idx_val].reshape(-1, features.shape[1], 1)  # Add channel dimension
         validation_target = target[idx_val]
+
         # 1D Convolutional NN
         nn = Convolutional(
             classification=True,
