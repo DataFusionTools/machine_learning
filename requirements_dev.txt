@@ -1,12 +1,14 @@
-numpy==1.24.2
-matplotlib==3.8.0
-scipy==1.11.3
-shap==0.42.1
-scikit-image==0.22.0
+numpy
+matplotlib
+scipy
+shap
+scikit-image
 libpysal>=4.8.0
-altair==5.1.2
-tensorflow==2.15.0
-tensorflow-probability[tf]==0.23.0
+altair
+setuptools
+tensorflow
+tf-keras
+tfp-nightly
 
 # Testing tools
 pytest>=7.2
