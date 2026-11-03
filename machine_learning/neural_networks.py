@@ -96,8 +96,13 @@ class NeuralNetwork(BaseClassMachineLearning):
         ]
         explainer = shap.KernelExplainer(self.model, background)
         shap_values = explainer.shap_values(input_data)
+        # newer shap versions return an array (samples, features, outputs) instead of a list
+        if isinstance(shap_values, np.ndarray) and shap_values.ndim == 3:
+            shap_values = shap_values[:, :, 0]
+        else:
+            shap_values = shap_values[0]
         shap.summary_plot(
-            shap_values[0], input_data, feature_names=self.feature_names, show=False
+            shap_values, input_data, feature_names=self.feature_names, show=False
         )
         figname = str(Path(output_folder, "feature_importance.png"))
         f.savefig(figname, bbox_inches="tight", dpi=600)
